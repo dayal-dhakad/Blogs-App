@@ -6,7 +6,7 @@ import { baseUrl } from "../../baseUrl";
 //Step 1
 export const AppContext = createContext();
 
-// to get clarity of below children go in index.js. this children is App.js
+// to get claarity of below children go in index.js. this children is App.js
 export default function AppContextProvider({children}){
         const [loading, setLoading] = useState(false);
         const [page, setPage] = useState(1);

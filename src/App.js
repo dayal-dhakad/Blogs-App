@@ -17,20 +17,15 @@ const App = () => {
 
     const tag = location.pathname.split("/").at(-1).replaceAll("-", " ");
     const category = location.pathname.split("/").at(-1).replaceAll("-", " ");
-    
+
     if (location.pathname.includes("tags")) {
       fetchBlogPosts(Number(page), tag);
-    }
-    else if (location.pathname.includes("categories")) {
+    } else if (location.pathname.includes("categories")) {
       fetchBlogPosts(Number(page), category);
-    }
-    else {
+    } else {
       fetchBlogPosts(Number(page));
     }
-
   }, [location.pathname, location.search]);
-
-  
 
   return (
     <Routes>
